@@ -21,24 +21,9 @@ def parse_args():
         description="Tools for managing cuts of the execution-layer.",
     )
 
-    cut = subparsers.add_parser(
-        "cut",
-        help=(
-            "Create a new copy of execution-related crates, and add them to "
-            "the workspace."
-        ),
-    )
-    cut.set_defaults(cmd="Cut", do=do_cut)
-    cut.add_argument(
-        "feature",
-        type=feature,
-        help="The name of the new cut to make.",
-    )
-    cut.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="Print the operations, without running them.",
-    )
+    
+   
+  
 
     generate_lib = subparsers.add_parser(
         "generate-lib",

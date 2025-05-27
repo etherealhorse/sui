@@ -47,20 +47,6 @@ def scan_files(path, process_line, depth=0):
             scan_file(full_path, process_line, depth)
 
 
-def try_match_line(line):
-    # Remove all spacing for easier pattern matching
-    line = line.strip().replace(' ', '')
-    m = PATTERN.match(line)
-    if m:
-        name = m.group(1)
-        if m.group(2) is None:
-            extra = ""
-        else:
-            # Add some spacing so it looks nicer
-            extra = m.group(2).replace(',', ', ').replace('=', ' = ')
-        return (name, extra)
-    return None
-
 def switch_to_local(project):
     default_path_map = {
         "move": "move/language",
