@@ -17,7 +17,7 @@ jobs:
         with:
           version: 9.1.1
       - name: Install Nodejs
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # pin@v6.0.0
         with:
           node-version: '20'
       - name: Run audit
@@ -40,7 +40,7 @@ jobs:
         with:
           version: 9.1.1
       - name: Install Nodejs
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # pin@v6.0.0
         with:
           node-version: '20'
           cache: 'pnpm'
